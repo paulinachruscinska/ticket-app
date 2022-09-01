@@ -1,0 +1,130 @@
+@use "sass:color";
+@import '../variables';
+
+.section-opinions{
+  margin:2% 0;
+  background: $color-button-secondary-background;
+
+  height: 100%;
+  text-align: center;
+  @media (min-width: 800px){
+    margin: 4% 4%;
+  }
+
+  h2{
+    padding: 2% 10px;
+    color: $color-button-secondary;
+    font-size: 2em;
+  }
+  .section-opinions-box, p, span{
+
+    color: $color-button-secondary;
+  }
+  p{
+    padding: 0 10px;
+  }
+  span{
+    padding: 1em;
+    font-weight: 700;
+    font-size: 1.5em;
+
+  }
+}
+.carousel{
+  position: relative;
+  height: 300px;
+  .section-opinions-box{
+
+
+  }
+  .button-prev, .button-next{
+    position: absolute;
+    top:50%;
+    width:30px;
+    height: 30px;
+
+  }
+  .button-prev{
+    left:5px;
+    background-color: $color-button-secondary;
+    -webkit-mask: url('../images/arrow-left.svg') no-repeat center;
+  }
+  .button-next{
+    right: 5px;
+    background-color: $color-button-secondary;
+    -webkit-mask: url('../images/arrow-right.svg') no-repeat center;
+  }
+}
+.button-next, .button-prev{
+  &:hover{
+    background-color: color.scale($color-button-secondary, $blackness: 30%);
+    cursor: pointer;
+  }
+}
+#opinions-box1, #opinions-box2, #opinions-box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  inset:0;
+  height: 300px;
+
+}
+#opinions-box1{
+  span{
+    position: relative;
+    &:before{
+      content:'';
+      position: absolute;
+      top:-100%;
+      left: 0;
+      min-width:100px;
+      min-height: 100px;
+      background: url("../images/woman-opinions.jpg") no-repeat center;
+      background-size: cover;
+      border-radius: 50%;
+      border: solid 2px $color-button-secondary;
+    }
+  }
+}
+#opinions-box2{
+  span{
+    position: relative;
+    &:before{
+      content:'';
+      position: absolute;
+      top:-125%;
+      left: 0;
+      min-width:100px;
+      min-height: 100px;
+      background: url("../images/man-opinions.jpg") no-repeat center;
+      background-size: cover;
+      border-radius: 50%;
+      border: solid 2px $color-button-secondary;
+    }
+  }
+}#opinions-box3{
+
+   span{
+     position: relative;
+     &:before{
+       content:'';
+       position: absolute;
+       top:-125%;
+       left: 0;
+       min-width:100px;
+       min-height: 100px;
+       background: url("../images/woman2-opinions.jpg") no-repeat center;
+       background-size: cover;
+       border-radius: 50%;
+       border: solid 2px $color-button-secondary;
+     }
+   }
+ }
+ .slide-active{
+   opacity: 1;
+ }
+ .slide{
+   opacity: 0;
+ }
