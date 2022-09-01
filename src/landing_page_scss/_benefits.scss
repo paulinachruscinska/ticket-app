@@ -1,0 +1,65 @@
+@import '../variables';
+.section-benefits {
+  //padding: 1em 0;
+  margin: 2% 0;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  @media (min-width: 800px){
+    margin: 4% 4%;
+  }
+  .benefits-container{
+  @media (min-width: 800px){
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+
+  }
+  }
+  h2 {
+    color: $color-button;
+    font-size: 2em;
+  }
+  .section-benefits--box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-button-background;
+    margin: 1em 0;
+    width: 100%;
+    border: 2px solid $color-button;
+    padding: 3.5%;
+    @media(min-width: 800px){
+      width: 30%;
+    }
+    p {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    img {
+      width: 80px;
+      ;
+    }
+  }
+}
+//.img1 {
+//  animation: img1Animation 2s  ease-in infinite;
+//}
+//@keyframes img1Animation{
+//  0%{transform: translateX(0)}
+//  100%{transform: translateX(300%)}
+//}
+.box1, .box2, .box3 {
+  &:hover{
+    transition:0.7s;
+    border-radius: 1000px;
+    background-color: $color-button;
+    p, span{
+      color: $color-background
+    }
+    img {
+      -webkit-filter: opacity(30%)
+    }
+  }
+}

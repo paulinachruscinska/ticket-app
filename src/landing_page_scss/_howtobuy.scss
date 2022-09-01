@@ -1,0 +1,49 @@
+@import '../variables';
+.section-howtobuy{
+  background-color: $color-button-secondary-background;
+  max-height: 90%;
+  max-width: 100%;
+  //width: 100%;
+  padding: 1em 0;
+  @media (min-width: 800px){
+    margin: 4% 4%;
+  }
+  .howtobuy-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (min-width: 800px){
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  h2{
+    text-align: center;
+    font-size: 2em;
+  }
+  .section-howtobuy--box{
+    max-width: 400px;
+    text-align: center;
+    margin: 1.5em;
+    p{
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    img{
+      max-width: 80px;
+      height: 15%;
+      padding: 5px;
+      border-radius: 50%;
+      border: solid 3px $color-button-secondary;
+      &:hover{
+        background-color: $color-button-secondary;
+        transform: rotate(360deg);
+        transition: 0.6s;
+      }
+    }
+  }
+}

@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./landing_page_js/header";
+import HowToBuyTicket from "./landing_page_js/howToBuyTicket";
+import Benefits from "./landing_page_js/benefits";
+import MainSection from "./landing_page_js/mainsection";
+import benefitsItems from "./landing_page_js/benefitsItems";
+import AboutUs from "./landing_page_js/aboutUs";
+import Numbers from "./landing_page_js/numbers";
+import Opinions from "./landing_page_js/opinions";
+import opinionsItems from "./landing_page_js/opinionsItems";
+import Footer from "./landing_page_js/footer";
+import React from "react";
 
-function App() {
+export default function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Header/>
+        <MainSection/>
+        <HowToBuyTicket/>
+        <Numbers/>
+        <Benefits benefits={benefitsItems}/>
+        <AboutUs />
+        <Opinions opinions={opinionsItems}/>
+        <Footer/>
+      </>
   );
 }
-
-export default App;
