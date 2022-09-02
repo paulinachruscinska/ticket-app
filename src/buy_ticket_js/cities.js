@@ -1,8 +1,8 @@
-export default
+const cities=
 [
     {
         id: 1,
-        img: '../images/cities/logo_bydgoszcz.png',
+        img: './images/cities/logo_bydgoszcz.png',
         city: 'Bydgoszcz',
         link: '/bydgoszcz'
     },
@@ -73,3 +73,4 @@ export default
         link: '/buyticket/zielonagora'
     }
 ]
+export default cities;

@@ -9,7 +9,7 @@ export default function Ticket({allTickets, allPassengerData}){
 
                 <h1 className='type-of-ticket'>{allTickets[0][0]}</h1>
                 <div className='ticket-data-passenger'>
-                    <img className='img-qr' src='../../images/kodqr.jpg'/>
+                    <img className='img-qr' src='../images/kodqr.jpg' alt='qr'/>
                         {allPassengerData.map(function (item, index){
                             return(
                                 <div className='ticket-data-passenger-text' key={index}>

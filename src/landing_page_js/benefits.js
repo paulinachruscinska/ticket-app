@@ -5,10 +5,10 @@ export default function Benefits ({benefits}){
         <section className='section-benefits' id='section-benefits'>
             <h2>Korzyści z eBiletu</h2>
             <div className='benefits-container'>
-                {benefits.map(function(benefit){
+                {benefits.map(benefit =>{
                     return(
                         <div key={benefit.id} className={'section-benefits--box'+ ' ' + 'box' + benefit.id}>
-                            <img className={'img' + benefit.id} src={benefit.img}/>
+                            <img className={'img' + benefit.id} src={benefit.img} alt='benefit'/>
                             <p>{benefit.textPrimary}</p>
                             <span>{benefit.textSecondary}</span>
                         </div>

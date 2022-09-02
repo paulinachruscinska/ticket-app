@@ -15,7 +15,7 @@ export default function BuyTicket1({cities}){
                         return(
                             <div className='city' key={city.id}>
                                 <Link to={city.link}>
-                                    <img src={city.img}/>
+                                    <img src={city.img} alt='logo-city'/>
                                     <p className='city-name'>{city.city}</p>
                                 </Link>
                             </div>

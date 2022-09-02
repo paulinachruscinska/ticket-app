@@ -13,7 +13,6 @@ export default function GdanskBuyTicket({prices, lines, addTicket, allTickets}){
     const [priceofTicket, setPriceofTicket]= useState('null');
     const [textofTicket, setTextofTicket]= useState('null');
     const arrayTicket = [typeOfTicket,priceofTicket, textofTicket, number];
-    const [activeIndex, setActiveIndex] = useState('none');
     let navigate = useNavigate();
 
     const handleTickets = (e, newTicket) => {
