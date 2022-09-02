@@ -4,7 +4,7 @@ const cities=
         id: 1,
         img: './images/cities/logo_bydgoszcz.png',
         city: 'Bydgoszcz',
-        link: '/bydgoszcz'
+        link: '/buyticket/bydgoszcz'
     },
     {
         id: 2,
