@@ -1,4 +1,4 @@
-export default
+const opinionsItems =
 [
     {
         id: 'opinions-box1',
@@ -16,3 +16,4 @@ export default
         signature: 'Magda'
     }
 ]
+export default opinionsItems;

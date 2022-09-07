@@ -19,7 +19,6 @@ export default function GdanskBuyTicket({prices, lines, addTicket, allTickets}){
         e.preventDefault();
         if (typeof addTicket === "function") {
             addTicket(prev => [...prev, newTicket])
-
             if (typeOfTicket !== 'null') {
                 navigate("/buyticket/completeform");
             }

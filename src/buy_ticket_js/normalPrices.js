@@ -1,4 +1,4 @@
-export default
+const normalPrices=
 [
     {
         text: 'Jednojazdowy na linie zwykłe i nocne',
@@ -17,3 +17,4 @@ export default
     price: 5
     }
 ]
+export default normalPrices;

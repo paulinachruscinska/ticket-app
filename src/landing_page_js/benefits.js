@@ -7,7 +7,7 @@ export default function Benefits ({benefits}){
             <div className='benefits-container'>
                 {benefits.map(benefit =>{
                     return(
-                        <div key={benefit.id} className={'section-benefits--box'+ ' ' + 'box' + benefit.id}>
+                        <div key={benefit.id} className={'section-benefits--box box' + benefit.id}>
                             <img className={'img' + benefit.id} src={benefit.img} alt='benefit'/>
                             <p>{benefit.textPrimary}</p>
                             <span>{benefit.textSecondary}</span>

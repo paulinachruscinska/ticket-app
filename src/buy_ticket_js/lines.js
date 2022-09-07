@@ -1,4 +1,4 @@
-export default [
+const lines = [
     {
         value:'1(autobus)',
         label: '1(autobus)'
@@ -40,3 +40,4 @@ export default [
         label: '309(autobus)'
     }
     ]
+export default lines;
