@@ -22,16 +22,17 @@ import Ticket from "./buy_ticket_js/ticket";
 function Index() {
     const [tickets, setTickets] = useState([]);
     const [passengerData, setPassengerData] = useState([]);
+    const [chooseCity, setChooseCity] = useState([]);
     return(
         <HashRouter>
             <Routes>
                 <Route path='/' element = {< Main />}/>
                 <Route path='buyticket' >
-                    <Route path='choosecity' element = {<BuyTicket1 cities={cities}/>} />
+                    <Route path='choosecity' element = {<BuyTicket1 cities={cities} addCity={setChooseCity} allCity={chooseCity}/>} />
                     <Route path='gdansk' element ={<GdanskBuyTicket prices={normalPrices} lines={lines} addTicket={setTickets} allTickets={tickets}/>}/>
                     <Route path='completeform' element={<FormToBuyTicket addPassengerData={setPassengerData} allPassengerData={passengerData}/>}/>
                 </Route>
-                <Route path='ticket' element={<Ticket addTicket={setTickets} allTickets={tickets} addPassengerData={setPassengerData} allPassengerData={passengerData}/>}/>
+                <Route path='ticket' element={<Ticket allCity={chooseCity} addTicket={setTickets} allTickets={tickets} addPassengerData={setPassengerData} allPassengerData={passengerData}/>}/>
             </Routes>
         </HashRouter>
     )

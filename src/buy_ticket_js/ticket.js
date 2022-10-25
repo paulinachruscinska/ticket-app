@@ -1,5 +1,5 @@
 import React from 'react'
-export default function Ticket({allTickets, allPassengerData}){
+export default function Ticket({allTickets, allPassengerData, allCity}){
     return (
         <section className='section-ticket'>
             <div className='section-ticket-header'>
@@ -22,7 +22,7 @@ export default function Ticket({allTickets, allPassengerData}){
                         })}
 
                 </div>
-                    <h2>GDAŃSK</h2>
+                    <h2>{allCity}</h2>
                     <p className='type-ticket'>{allTickets[0][2]}</p>
                     <div className='ticket-info'>
                         <p>Cena: <strong>{allTickets[0][1]} zł</strong></p>

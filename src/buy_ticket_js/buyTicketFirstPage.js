@@ -4,7 +4,18 @@ import Footer from "../landing_page_js/footer";
 import {Link} from 'react-router-dom';
 
 
-export default function BuyTicket1({cities}){
+export default function BuyTicket1({cities, addCity, allCity}){
+    const selectCity = (e) =>{
+        e.preventDefault();
+        if(typeof addCity === 'function'){
+            addCity(e.currentTarget.id);
+        } else {
+            throw new Error('to nie jest funkcja')
+        }
+        console.log(allCity)
+
+    }
+
     return(
         <>
             <Header/>
@@ -13,7 +24,7 @@ export default function BuyTicket1({cities}){
                 <div className='cities'>
                     {cities.map(function(city){
                         return(
-                            <div className='city' key={city.id}>
+                            <div onClick={selectCity} className='city' key={city.id} id={city.city}>
                                 <Link to={city.link}>
                                     <img src={city.img} alt='logo-city'/>
                                     <p className='city-name'>{city.city}</p>
