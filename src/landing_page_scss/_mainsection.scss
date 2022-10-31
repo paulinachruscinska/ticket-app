@@ -49,6 +49,10 @@
     border: none;
     box-shadow: 2px 2px 3px $main-color-text;
     border-radius: 1000px;
+    &:hover{
+      transition: 0.3s;
+      transform: scale(1.25);
+    }
 
     span{
       color: $color-background;

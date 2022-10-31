@@ -19,7 +19,7 @@ export default function FormToBuyTicket({addPassengerData, allPassengerData}){
     const onSubmit = (newPassengerData) => {
         console.log(newPassengerData);
         if(typeof addPassengerData === 'function'){
-            addPassengerData(prev => [...prev, newPassengerData])
+            addPassengerData([newPassengerData])
             navigate('/ticket');
         }
     //allPassengerData.push(newPassengerData);
