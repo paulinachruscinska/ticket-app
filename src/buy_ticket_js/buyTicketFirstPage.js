@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Header from "../landing_page_js/header";
 import Footer from "../landing_page_js/footer";
 import {useNavigate} from 'react-router-dom';
 
 
-export default function BuyTicket1({cities, addCity, allCity}){
-    const [chooseCity, setChooseCity] = useState('blabla')
+export default function BuyTicket1({cities, addCity}){
     let navigate = useNavigate();
     return(
         <>
@@ -17,9 +16,8 @@ export default function BuyTicket1({cities, addCity, allCity}){
                         return(
                             <div
                                 onClick={()=>{
-                                    setChooseCity(city.city); // czemu ta funkcja nie działa?
                                     if(typeof addCity === 'function'){
-                                        addCity(chooseCity);
+                                        addCity(city.city);
                                         navigate(city.link);
                                     } else {
                                         throw new Error('to nie jest funkcja')

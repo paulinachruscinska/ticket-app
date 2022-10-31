@@ -23,6 +23,9 @@
   font-family: $main-font;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   background-color: $color-background;
 }
