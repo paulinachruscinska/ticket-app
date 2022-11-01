@@ -10,11 +10,39 @@ export default function HowToBuyTicket(){
                 <span>Podaj po jakim mieście chcesz podróżować, aby możliwe było wybranie dla
                 Ciebie odpowiedniego transportu publicznego</span>
             </div>
+                <div id="arrowAnim">
+                    <div className="arrowSliding">
+                        <div className="arrow"></div>
+                    </div>
+                    <div className="arrowSliding delay1">
+                        <div className="arrow"></div>
+                    </div>
+                    <div className="arrowSliding delay2">
+                        <div className="arrow"></div>
+                    </div>
+                    <div className="arrowSliding delay3">
+                        <div className="arrow"></div>
+                    </div>
+                </div>
             <div className='section-howtobuy--box 3'>
                 <img src={ require('../images/ticket-howtobuy.svg').default } alt='ticket'/>
                 <p>Wybierz i opłać</p>
                 <span>Wybierz odpowiedni typ biletu i opłać zamówienie</span>
             </div>
+                <div id="arrowAnim">
+                    <div className="arrowSliding">
+                        <div className="arrow"></div>
+                    </div>
+                    <div className="arrowSliding delay1">
+                        <div className="arrow"></div>
+                    </div>
+                    <div className="arrowSliding delay2">
+                        <div className="arrow"></div>
+                    </div>
+                    <div className="arrowSliding delay3">
+                        <div className="arrow"></div>
+                    </div>
+                </div>
             <div className='section-howtobuy--box 4'>
                 <img src={ require('../images/autobus.svg').default } alt='autobus'/>
                 <p>Gotowe! Miłej podróży</p>
