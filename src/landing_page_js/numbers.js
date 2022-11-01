@@ -38,7 +38,7 @@ export default function Numbers(){
         }
     }
     return(
-            <section onMouseEnter={handleClick} className='section-numbers'>
+            <section onMouseMove={handleClick} onTouchMove={handleClick} className='section-numbers'>
                 <div>
                     <p>{numbers}</p>
                     <span>godziny masz dostęp do biletów</span>
