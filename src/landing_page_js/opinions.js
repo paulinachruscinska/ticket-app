@@ -19,11 +19,11 @@ export default function Opinions({opinions}){
     return(
         <section className='section-opinions' id='section-opinions'>
             <h2>CO MÓWIĄ O NAS INNI?</h2>
-            <div className='carousel'>
+            <div className='carouselOpinions'>
                 {opinions.map(function(opinionItem, index){
                     return(
                         <div key={opinionItem.id}
-                             className={slideIndex === index + 1 ? "slide-active" : "slide" } id={opinionItem.id}>
+                             className={slideIndex === index + 1 ? "slide-active" : "slide1" } id={opinionItem.id}>
                             <p>{opinionItem.text}</p>
                             <span>{opinionItem.signature}</span>
                         </div>
