@@ -22,8 +22,8 @@ header {
       content: '';
       position: absolute;
       z-index: -1;
-      width: 1.5em;
-      height: 1.5em;
+      width: 1.25em;
+      height: 1.25em;
       background-color: $color-button;
       -webkit-mask: url('../images/ticket.svg') no-repeat center;
       left:30%;
