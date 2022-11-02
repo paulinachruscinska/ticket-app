@@ -4,7 +4,7 @@
   text-align: center;
 }
 .section-main{
-  height: 90vh;
+  height: 85vh;
   background-image: url("../images/train-background.jpg");
   background-size: cover;
   position: relative;
@@ -16,7 +16,7 @@
   margin-bottom: 10px;
   &:before{
     content:'';
-    height:90vh;
+    height:85vh;
     width:100%;
     position: absolute;
     top:0;

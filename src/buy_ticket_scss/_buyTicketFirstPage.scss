@@ -7,7 +7,7 @@
     text-align: center;
   }
   .cities{
-    margin: 2% 4% 0;
+    margin: 2.5% 4% 2.5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,6 +26,9 @@
     background-color: $color-background;
     border-radius: 20px;
     box-shadow: 2px 2px 5px $color-button;
+    @media(min-width: 800px){
+      min-width: 400px;
+    }
     &:hover{
       background-color: $color-button-background;
       cursor: pointer;
