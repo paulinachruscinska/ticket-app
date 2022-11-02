@@ -7,7 +7,7 @@ export default function Opinions({opinions}){
         <section className='section-opinions' id='section-opinions'>
             <h2>CO MÓWIĄ O NAS INNI?</h2>
             <h3>Wasze pozytywne słowa jeszcze bardziej nas motywują!</h3>
-            <Carousel autoPlay showStatus={false} showThumbs={false} infiniteLoop transitionTime='500' interval='3000'>
+            <Carousel  onSwipeMove swipeable={true} autoPlay showStatus={false} showThumbs={false} infiniteLoop transitionTime='500' interval='3000'>
                 {opinions.map(function(opinionItem){
                     return(
                         <div key={opinionItem.id} id={opinionItem.id} className='opinion'>
