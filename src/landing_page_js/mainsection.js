@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 
 export default function MainSection(){
     return(
-        <Carousel autoPlay interval='3000' infiniteLoop showStatus={false} showThumbs={false}>
+        <Carousel autoPlay interval='3000' infiniteLoop transitionTime='500' showStatus={false} showThumbs={false}>
             <section className='section-main'>
                 <h1>Noś swój bilet w smartfonie</h1>
                 <p>Oszczędź czas, ceń wygodę i dbaj o środowisko</p>

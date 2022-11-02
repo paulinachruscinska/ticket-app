@@ -20,7 +20,7 @@ export default function AboutUs(){
             </section>
                 <section className='vehicles'>
                     <h2>Środki transportu, jakimi możesz się poruszać</h2>
-                    <Carousel autoPlay showThumbs={false} showStatus={false} infiniteLoop interval='2000'>
+                    <Carousel autoPlay showThumbs={false} showStatus={false} infiniteLoop interval='2000' transitionTime='500' width='300px' >
                         <div>
                             <img className='vehicle' src={img1} alt='train' width='150px'/>
                             <p>pociąg</p>
