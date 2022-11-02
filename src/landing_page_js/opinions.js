@@ -1,37 +1,25 @@
-import React, {useState} from 'react';
-export default function Opinions({opinions}){
-    const[slideIndex, setSlideIndex] = useState(1)
+import React from 'react';
+import {Carousel} from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-    const nextSlide=()=>{
-        if(slideIndex!==opinions.length){
-            setSlideIndex(slideIndex + 1)
-        } else if(slideIndex===opinions.length){
-            setSlideIndex(1)
-        }
-    }
-    const prevSlide=()=>{
-        if(slideIndex!==1){
-            setSlideIndex(slideIndex - 1)
-        } else if(slideIndex===1){
-            setSlideIndex(opinions.length)
-        }
-    }
+export default function Opinions({opinions}){
     return(
         <section className='section-opinions' id='section-opinions'>
             <h2>CO MÓWIĄ O NAS INNI?</h2>
-            <div className='carouselOpinions'>
-                {opinions.map(function(opinionItem, index){
+            <h3>Wasze pozytywne słowa jeszcze bardziej nas motywują!</h3>
+            <Carousel autoPlay showStatus={false} showThumbs={false} infiniteLoop transitionTime='500' interval='3000'>
+                {opinions.map(function(opinionItem){
                     return(
-                        <div key={opinionItem.id}
-                             className={slideIndex === index + 1 ? "slide-active" : "slide1" } id={opinionItem.id}>
+                        <div key={opinionItem.id} id={opinionItem.id} className='opinion'>
                             <p>{opinionItem.text}</p>
-                            <span>{opinionItem.signature}</span>
+                            <div className='opinions-signature'>
+                                <span className='photo'/>
+                                <span>{opinionItem.signature}</span>
+                            </div>
                         </div>
                     )
                 })}
-                <button onClick={nextSlide} className='button-next'/>
-                <button onClick={prevSlide} className='button-prev'/>
-            </div>
+            </Carousel>
         </section>
     )
 }

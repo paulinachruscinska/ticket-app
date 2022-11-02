@@ -2,129 +2,78 @@
 @import '../variables';
 
 .section-opinions{
+  padding: 20px;
   margin:2% 0;
-  background: $color-button-secondary-background;
-
-  height: 100%;
+  background: $color-button-secondary;
   text-align: center;
-  @media (min-width: 800px){
-    margin: 4% 4%;
+  @media(min-width: 800px){
+    padding: 64px;
   }
-
+  .opinion{
+    padding: 20px;
+  }
   h2{
     padding: 2% 10px;
-    color: $color-button-secondary;
-    font-size: 2em;
+    color: white;
+    font-size: 2.7rem;
+  }
+  h3{
+    color:white;
+    font-size: 1.75rem;
   }
   .section-opinions-box, p, span{
 
-    color: $color-button-secondary;
+    color: white;
   }
   p{
+    margin: 2% auto;
     padding: 0 10px;
+    font-size: 1.25rem;
+    @media(min-width: 800px){
+      width: 50%;
+    }
+  }
+  .opinions-signature{
+   padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   span{
     padding: 1em;
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 2rem;
 
-  }
-}
-.carouselOpinions{
-  position: relative;
-  height: 300px;
-  .section-opinions-box{
-
-
-  }
-  .button-prev, .button-next{
-    position: absolute;
-    top:50%;
-    width:30px;
-    height: 30px;
-
-  }
-  .button-prev{
-    left:5px;
-    background-color: $color-button-secondary;
-    -webkit-mask: url('../images/arrow-left.svg') no-repeat center;
-  }
-  .button-next{
-    right: 5px;
-    background-color: $color-button-secondary;
-    -webkit-mask: url('../images/arrow-right.svg') no-repeat center;
-  }
-}
-.button-next, .button-prev{
-  &:hover{
-    background-color: color.scale($color-button-secondary, $blackness: 30%);
-    cursor: pointer;
   }
 }
 #opinions-box1, #opinions-box2, #opinions-box3{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  position: absolute;
-  inset:0;
-  height: 300px;
-
+}
+.photo{
+  padding: 10px;
+  min-width:150px;
+  min-height: 150px;
+  border-radius: 50%;
+  border: solid 2px white;
 }
 #opinions-box1{
-  span{
-    position: relative;
-    &:before{
-      content:'';
-      position: absolute;
-      top:-100%;
-      left: 0;
-      min-width:100px;
-      min-height: 100px;
-      background: url("../images/woman-opinions.jpg") no-repeat center;
-      background-size: cover;
-      border-radius: 50%;
-      border: solid 2px $color-button-secondary;
-    }
-  }
-}
-#opinions-box2{
-  span{
-    position: relative;
-    &:before{
-      content:'';
-      position: absolute;
-      top:-125%;
-      left: 0;
-      min-width:100px;
-      min-height: 100px;
-      background: url("../images/man-opinions.jpg") no-repeat center;
-      background-size: cover;
-      border-radius: 50%;
-      border: solid 2px $color-button-secondary;
-    }
-  }
-}
-#opinions-box3{
-   span{
-     position: relative;
-     &:before{
-       content:'';
-       position: absolute;
-       top:-125%;
-       left: 0;
-       min-width:100px;
-       min-height: 100px;
-       background: url("../images/woman2-opinions.jpg") no-repeat center;
-       background-size: cover;
-       border-radius: 50%;
-       border: solid 2px $color-button-secondary;
-     }
+.photo{
+  background: url("../images/woman-opinions.jpg") no-repeat center;
+  background-size: cover;
    }
  }
- .slide-active{
-   opacity: 1;
- }
- .slide1{
-   opacity: 0;
+#opinions-box2{
+  .photo{
+    background: url("../images/man-opinions.jpg") no-repeat center;
+    background-size: cover;
+    }
+  }
+#opinions-box3{
+   .photo{
+     background: url("../images/woman2-opinions.jpg") no-repeat center;
+     background-size: cover;
+   }
  }
