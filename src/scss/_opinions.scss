@@ -1,0 +1,79 @@
+@use "sass:color";
+@import 'settings/variables';
+
+.section-opinions{
+  padding: 20px;
+  margin:2% 0;
+  background: $color-button-secondary;
+  text-align: center;
+  @media(min-width: 800px){
+    padding: 64px;
+  }
+  .opinion{
+    padding: 20px;
+  }
+  h2{
+    padding: 2% 10px;
+    color: white;
+    font-size: 2.7rem;
+  }
+  h3{
+    color:white;
+    font-size: 1.75rem;
+  }
+  .section-opinions-box, p, span{
+
+    color: white;
+  }
+  p{
+    margin: 2% auto;
+    padding: 0 10px;
+    font-size: 1.25rem;
+    @media(min-width: 800px){
+      width: 50%;
+    }
+  }
+  .opinions-signature{
+   padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  span{
+    padding: 1em;
+    font-weight: 700;
+    font-size: 2rem;
+
+  }
+}
+#opinions-box1, #opinions-box2, #opinions-box3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.photo{
+  padding: 10px;
+  min-width:150px;
+  min-height: 150px;
+  border-radius: 50%;
+  border: solid 2px white;
+}
+#opinions-box1{
+.photo{
+  background: url("../images/woman-opinions.jpg") no-repeat center;
+  background-size: cover;
+   }
+ }
+#opinions-box2{
+  .photo{
+    background: url("../images/man-opinions.jpg") no-repeat center;
+    background-size: cover;
+    }
+  }
+#opinions-box3{
+   .photo{
+     background: url("../images/woman2-opinions.jpg") no-repeat center;
+     background-size: cover;
+   }
+ }
