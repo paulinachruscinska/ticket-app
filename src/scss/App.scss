@@ -1,0 +1,31 @@
+@import 'settings/variables';
+@import 'header';
+@import 'nav';
+@import 'mainsection';
+@import 'howtobuy';
+@import 'benefits';
+@import 'aboutUs';
+@import 'numbers';
+@import 'opinions';
+@import 'footer';
+@import 'buyTicketFirstPage';
+@import 'gdanskBuyTicket';
+@import 'formToBuyTicket';
+@import 'ticket';
+
+
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  color:$main-color-text;
+  font-family: $main-font;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background-color: $color-background;
+}

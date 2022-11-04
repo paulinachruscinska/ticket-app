@@ -2,20 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import {useState} from "react";
-import Main from "./App";
-import BuyTicket1 from "./buy_ticket_js/buyTicketFirstPage";
-import './App.scss';
-import cities from "./buy_ticket_js/cities";
+import Home from "./pages/Home";
+import BuyTicket1 from "./components/Cities";
+import './scss/App.scss';
+import cities from "./objects/cities";
 import{
     HashRouter,
     Route,
     Routes
 } from "react-router-dom";
-import GdanskBuyTicket from "./buy_ticket_js/gdanskBuyTicket";
-import normalPrices from "./buy_ticket_js/normalPrices";
-import lines from './buy_ticket_js/lines';
-import FormToBuyTicket from "./buy_ticket_js/formToBuyTicket";
-import Ticket from "./buy_ticket_js/ticket";
+import GdanskBuyTicket from "./components/gdanskBuyTicket";
+import normalPrices from "./objects/normalPrices";
+import lines from './objects/lines';
+import FormToBuyTicket from "./components/formToBuyTicket";
+import Ticket from "./components/ticket";
 
 
 
@@ -26,10 +26,10 @@ function Index() {
     return(
         <HashRouter>
             <Routes>
-                <Route path='/' element = {< Main />}/>
+                <Route path='/' element = {< Home />}/>
                 <Route path='buyticket' >
                     <Route path='choosecity' element = {<BuyTicket1 cities={cities} addCity={setChooseCity} allCity={chooseCity}/>} />
-                    <Route path='gdansk' element ={<GdanskBuyTicket prices={normalPrices} lines={lines} addTicket={setTickets} allTickets={tickets}/>}/>
+                    <Route path='selectyouroptions' element ={<GdanskBuyTicket prices={normalPrices} lines={lines} addTicket={setTickets} allTickets={tickets}/>}/>
                     <Route path='completeform' element={<FormToBuyTicket addPassengerData={setPassengerData} allPassengerData={passengerData}/>}/>
                 </Route>
                 <Route path='ticket' element={<Ticket allCity={chooseCity} addTicket={setTickets} allTickets={tickets} addPassengerData={setPassengerData} allPassengerData={passengerData}/>}/>
