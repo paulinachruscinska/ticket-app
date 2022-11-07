@@ -17,7 +17,7 @@ Coraz częściej ludzie żyją w ciągłym biegu i nie mają czasu na codzienne 
 <br/>
 Pozwala ona na "zakup" biletu :ticket: w smartfonie :telephone: lub komputerze :computer:, dzięki czemu możliwe jest zaoszczędzenie czasu, wygoda oraz dbanie o środowisko (wygenerowany bilet pokazuje się na ekranie). 
 <br/>
-Aby "kupić" eBilet należy wybrać jedną spośród 12 miejscowości 🏙️ , zaznaczyć między innymi typ biletu, ilość oraz wypełnić formularz. Po poprawnym wykonaniu kroków zostaje wygenerowany bilet z podstawowymi, najważniejszymi informacjami na temat pasażera i wybranego typu biletu. 
+Aby "kupić" eBilet należy wybrać jedną spośród 12 miejscowości 🏙️ , zaznaczyć typ biletu, ilość oraz wypełnić formularz. Po poprawnym uzupełnieniu danych zostaje wygenerowany bilet zawierający podstawowe, najważniejsze informacje na temat pasażera i wybranego typu biletu. 
 
 
 ## BUILT WITH
