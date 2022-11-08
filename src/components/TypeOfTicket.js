@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import Header from "./Header";
-import Footer from "./Footer";
 import Select from "react-select";
 import {useNavigate} from 'react-router-dom';
-export default function GdanskBuyTicket({prices, lines, addTicket, allTickets}){
+
+
+export default function TypeOfTicket({prices, lines, addTicket}){
     const [displayNormalTicket, setDisplayNormalTicket] = useState('none');
     const [displayReducedTicket, setDisplayReducedTicket] = useState('none');
     const [displayPrices, setDisplayPrices]= useState('none');
@@ -12,6 +12,7 @@ export default function GdanskBuyTicket({prices, lines, addTicket, allTickets}){
     const [typeOfTicket, setTypeOfTicket] = useState('null');
     const [priceofTicket, setPriceofTicket]= useState('null');
     const [textofTicket, setTextofTicket]= useState('null');
+
     const arrayTicket = [typeOfTicket,priceofTicket, textofTicket, number];
     let navigate = useNavigate();
 
@@ -21,13 +22,16 @@ export default function GdanskBuyTicket({prices, lines, addTicket, allTickets}){
             addTicket(prev => [...prev, newTicket])
             console.log(addTicket);
             console.log(newTicket);
-            if (typeOfTicket !== 'null') {
-                navigate("/buyticket/completeform");
+            if(typeOfTicket !== 'null'){
+                navigate('/buyticket/completeform');
+            } else {
+                throw new Error('złe rozwiązanie')
             }
+        } else {
+            console.log('to nie jest funkcja')
         }
-        //allTickets.push(newTicket);
-    }
 
+    }
 
     useEffect(() => {
     }, [typeOfTicket]);
@@ -75,32 +79,55 @@ export default function GdanskBuyTicket({prices, lines, addTicket, allTickets}){
     }
 
     return (
-        <>
-            <Header/>
             <section className='section-gdansk'>
                 <div className='type-of-ticket'>
-                    <div className='normal-ticket' onClick={handleClickNormalTicket} id={typeOfTicket}>
+                    <div
+                        className='normal-ticket'
+                        onClick={handleClickNormalTicket}
+                        id={typeOfTicket}
+                    >
                         <p className='normal-ticket-text'>bilet normalny</p>
                     </div>
-                    <div className='reduced-ticket' onClick={handleClickReducedTicket} id={typeOfTicket}>
+                    <div
+                        className='reduced-ticket'
+                        onClick={handleClickReducedTicket}
+                        id={typeOfTicket}
+                    >
                         <p className='reduced-ticket-text'>bilet ulgowy</p>
                     </div>
                 </div>
-                <div className='ticket-prices' style={{display: displayPrices}}>
-                    <div className='ticket-prices-normal' style={{display: displayNormalTicket }}>
+                <div
+                    className='ticket-prices'
+                    style={{display: displayPrices}}
+                >
+                    <div
+                        className='ticket-prices-normal'
+                        style={{display: displayNormalTicket }}
+                    >
                         {prices.map(function(price, index){
                             return(
-                            <div key={index} className='price'  onClick={() => chooseTicketPrice(price.text, price.price)}>
+                            <div
+                                key={index}
+                                className='price'
+                                onClick={() => chooseTicketPrice(price.text, price.price)}
+                            >
                                 <span className='price-text'>{price.text}</span>
                                 <span className='price-single'>{price.price + ' zł'}</span>
                             </div>
                             )
                         })}
                     </div>
-                    <div className='ticket-prices-reduced' style={{display: displayReducedTicket}}>
+                    <div
+                        className='ticket-prices-reduced'
+                        style={{display: displayReducedTicket}}
+                    >
                         {prices.map(function(price, index){
                             return(
-                                <div key={index} className='price' onClick={() => chooseTicketPrice(price.text, price.price/2)} >
+                                <div
+                                    key={index}
+                                    className='price'
+                                    onClick={() => chooseTicketPrice(price.text, price.price/2)}
+                                >
                                     <span className='price-text'>{price.text} </span>
                                     <span className='price-single'>{price.price/2 + ' zł'}</span>
                                 </div>
@@ -114,16 +141,25 @@ export default function GdanskBuyTicket({prices, lines, addTicket, allTickets}){
                     onSubmit={(e) => handleTickets(e,arrayTicket)}
                 >
                     <div className='choose-line'>
-                        <Select options={lines} required onChange={handleChange} placeholder="Wybierz nr linii" isMulti  />
+                        <Select
+                            options={lines}
+                            required
+                            onChange={handleChange}
+                            placeholder="Wybierz nr linii"
+                            isMulti
+                        />
                     </div>
                     <div className='choose-item-of-tickets'>
                         <label>Wybierz ilość biletów:</label><br/>
-                        <input className='number' type='number' value={number} onChange={(e)=> setNumber(e.target.value)}/>
+                        <input
+                            className='number'
+                            type='number'
+                            value={number}
+                            onChange={(e) => setNumber(e.target.value)}
+                        />
                     </div>
                     <button type='submit' className='button-buy'>Kupuję</button>
                 </form>
             </section>
-            <Footer/>
-        </>
     )
 }

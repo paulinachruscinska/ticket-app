@@ -1,22 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import {useState} from "react";
 import Home from "./pages/Home";
-import BuyTicket1 from "./components/Cities";
 import './scss/App.scss';
-import cities from "./objects/cities";
 import{
     HashRouter,
     Route,
     Routes
 } from "react-router-dom";
-import GdanskBuyTicket from "./components/gdanskBuyTicket";
-import normalPrices from "./objects/normalPrices";
-import lines from './objects/lines';
-import FormToBuyTicket from "./components/formToBuyTicket";
-import Ticket from "./components/ticket";
-
+import SelectCityToBuyTicket from "./pages/SelectCityToBuyTicket";
+import SelectTypeOfTicket from "./pages/SelectTypeOfTicket";
+import CompleteFormToBuyTicket from "./pages/CompleteFormToBuyTicket";
+import Ticket from "./pages/Ticket";
 
 
 function Index() {
@@ -26,13 +21,44 @@ function Index() {
     return(
         <HashRouter>
             <Routes>
-                <Route path='/' element = {< Home />}/>
+                <Route path='/' element = {<Home/>}/>
                 <Route path='buyticket' >
-                    <Route path='choosecity' element = {<BuyTicket1 cities={cities} addCity={setChooseCity} allCity={chooseCity}/>} />
-                    <Route path='selectyouroptions' element ={<GdanskBuyTicket prices={normalPrices} lines={lines} addTicket={setTickets} allTickets={tickets}/>}/>
-                    <Route path='completeform' element={<FormToBuyTicket addPassengerData={setPassengerData} allPassengerData={passengerData}/>}/>
+                    <Route
+                        path='choosecity'
+                        element ={
+                        <SelectCityToBuyTicket
+                            addCity={setChooseCity}
+                            allCity={chooseCity}
+                        />}
+                    />
+                    <Route
+                        path='selectyourticket'
+                        element ={
+                        <SelectTypeOfTicket
+                            addTicket={setTickets}
+                            allTickets={tickets}
+                        />}
+                    />
+                    <Route
+                        path='completeform'
+                        element={
+                        <CompleteFormToBuyTicket
+                            addPassengerData={setPassengerData}
+                            allPassengerData={passengerData}
+                        />}
+                    />
                 </Route>
-                <Route path='ticket' element={<Ticket allCity={chooseCity} addTicket={setTickets} allTickets={tickets} addPassengerData={setPassengerData} allPassengerData={passengerData}/>}/>
+                <Route
+                    path='ticket'
+                    element={
+                    <Ticket
+                        allCity={chooseCity}
+                        addTicket={setTickets}
+                        allTickets={tickets}
+                        addPassengerData={setPassengerData}
+                        allPassengerData={passengerData}
+                    />}
+                />
             </Routes>
         </HashRouter>
     )
