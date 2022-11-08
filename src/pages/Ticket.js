@@ -1,4 +1,5 @@
 import React from 'react'
+
 export default function Ticket({allTickets, allPassengerData, allCity}){
     const ticket = allTickets[0][0];
     const priceOfTicket = allTickets[0][1];

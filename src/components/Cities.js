@@ -1,8 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
 
-
-export default function BuyTicket1({cities, addCity}){
+export default function Cities({cities, addCity}){
     let navigate = useNavigate();
     return(
             <section className='section-choose-city'>

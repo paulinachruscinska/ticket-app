@@ -1,7 +1,5 @@
 import React from 'react';
 import {useForm} from "react-hook-form";
-import Header from "./Header";
-import Footer from "./Footer";
 import {useNavigate} from 'react-router-dom';
 
 export default function FormToBuyTicket({ addPassengerData }){
@@ -24,8 +22,6 @@ export default function FormToBuyTicket({ addPassengerData }){
         }
     }
     return(
-        <>
-            <Header/>
             <section className='section-form-buy-ticket'>
                 <h1 className='form-buy-ticket-head'>Dane pasażera</h1>
                 <form
@@ -97,8 +93,6 @@ export default function FormToBuyTicket({ addPassengerData }){
                 <div className='buy-ticket-methods'>
                 </div>
             </section>
-            <Footer/>
-        </>
     )
 }
 
