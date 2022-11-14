@@ -9,7 +9,7 @@
 
 </div>
 
-## WIĘCEJ NA TEMAT PROJEKTU
+## ABOUT PROJECT
 
 Coraz częściej ludzie żyją w ciągłym biegu i nie mają czasu na codzienne czynności. 
 <br/>
